@@ -1,0 +1,13 @@
+.location-imageloader{
+  position:relative;
+  height:inherit;
+  overflow: hidden
+}
+
+.location-imageloader > *{
+  width: auto;
+  height: 100%;
+  position: relative;
+  left: -10px;
+  z-index: -1;
+}

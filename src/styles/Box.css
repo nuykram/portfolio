@@ -1,0 +1,37 @@
+.box {
+  border: 1px solid #9E9D9D;
+}
+
+.box.location{
+  position:relative;
+  width: 25%;
+  height: 85vh;
+  border-right: transparent
+}
+
+.box.main{
+  position:relative;
+  width: 100%;
+  height: calc(65vh - 1px);
+}
+
+.box.option{
+  position:relative;
+  width: 100%;
+  height: calc(20vh);
+  border-top: transparent;
+}
+
+.game-box{
+  width: 75%;
+  margin:2vh auto;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.game-box-right{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}

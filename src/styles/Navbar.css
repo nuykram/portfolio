@@ -1,0 +1,33 @@
+.navbar{
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+}
+
+.navbar-logo{
+  position:absolute;
+  width: 15rem;
+  top: -55px;
+  left: -1px;
+  z-index: 1;
+}
+
+.navbar-buttons{
+  display:flex;
+}
+
+.navbar button{
+  margin-left: 10px;
+  margin-right:10px;
+  font-family: 'VT323', monospace;
+  font-size: 1.5em;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+
+.navbar button[name='github'] {
+  height:50px;
+  scale: 1.25;
+  filter: invert(100%) sepia(23%) saturate(0%) hue-rotate(13deg) brightness(112%) contrast(101%);
+}

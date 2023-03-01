@@ -8,6 +8,6 @@
   width: auto;
   height: 100%;
   position: relative;
-  right: calc(1 + 5vh);
+  right: calc(10px + 5vh);
   z-index: -1;
 }

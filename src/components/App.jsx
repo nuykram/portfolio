@@ -22,7 +22,7 @@ const App = (props) => {
           boxType='location'
           content={
             <LocationImageLoader
-              imageRef={'wizardtowerinside2'}//props.tags.background || 'wizardtower'
+              imageRef={props.tags.background || 'wizardtower'}//props.tags.background || 'wizardtower'
             />
           }
         />

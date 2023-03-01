@@ -2,7 +2,24 @@
   display:flex;
   flex-direction: column;
   max-width: 100%;
-  gap: 0;
+  height:80%;
+  overflow-y:scroll;
+}
+
+
+.main-textloader::-webkit-scrollbar {
+  width: 10px;
+}
+.main-textloader::-webkit-scrollbar-track {
+  background-color: transparent
+}
+.main-textloader::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-top: 30px dashed rgb(130, 130, 130);
+}
+
+.main-text-container{
+  height: auto;
 }
 
 .main-text{
@@ -10,18 +27,23 @@
   font-family: 'VT323', monospace;
   font-size: 1.5em;
   color:rgb(190, 190, 190);
+  height: auto;
 }
 
 .main-text.stored {
   color:rgb(72, 72, 72);
 }
 
-
 .main-text.typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: normal;
   animation:
     typing 1s steps(40, end)
+}
+
+.bottom-anchor{
+  margin-top: 80px;
+  height:20px;
 }
 
 /* The typing effect */

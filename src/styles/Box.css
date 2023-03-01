@@ -12,6 +12,7 @@
 .box.main{
   position:relative;
   width: 100%;
+  max-width: 100%;
   height: calc(65vh - 1px);
 }
 
@@ -32,6 +33,7 @@
 
 .game-box-right{
   width: 80%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
 }

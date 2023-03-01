@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { connect } from "react-redux";
+import { makeChoice } from "../state/actions";
 
 import '../styles/App.css'
 
 import Box from './Box';
 import Navbar from './Navbar'
 import LocationImageLoader from './LocationImageLoader'
-
+import MainTextLoader from './MainTextLoader'
+import OptionChoiceLoader from './OptionChoiceLoader'
 
 const App = (props) => {
-
+  console.log(props)
   return (
     <div className='app'>
       <div className='header' >
@@ -20,18 +22,26 @@ const App = (props) => {
           boxType='location'
           content={
             <LocationImageLoader
-              imageRef='wizardtower' //props.tag
+              imageRef={'wizardtowerinside2'}//props.tags.background || 'wizardtower'
             />
           }
         />
         <div className='game-box-right'>
           <Box
             boxType='main'
-            content={<></>} //props.sceneText
+            content={
+              <MainTextLoader
+                textArray={props.sceneText}
+              />}
           />
           <Box
             boxType='option'
-            content={<></>} //props.currentChoices, props.makeChoice
+            content={
+              <OptionChoiceLoader
+                choices={props.currentChoices}
+                makeChoice={props.makeChoice}
+              />
+            }
           />
         </div>
       </div>

@@ -12,6 +12,8 @@ import OptionChoiceLoader from './OptionChoiceLoader'
 import GameStartView from './GameStartView'
 import GameStartFlavorText from './GameStartFlavorText'
 import ProjectsView from './ProjectsView'
+import ResumePdfView from './ResumePdfView'
+
 
 const App = (props) => {
   // home, adventure, about, projects, resume
@@ -53,7 +55,7 @@ const App = (props) => {
       case 'resume':
         return {
           location: <>resume</>,
-          main:<>resume</>,
+          main:<ResumePdfView />,
           options:<>resume</>
         }
     }

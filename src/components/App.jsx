@@ -68,7 +68,7 @@ const App = (props) => {
         <Navbar />
       </div>
 
-      <div className={view === 'home' ? 'game-box home' : 'game-box'}>
+      <div className={`game-box ${view}`}>
         {/* Box Left Location */}
         <Box
           boxType='location'

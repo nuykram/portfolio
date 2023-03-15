@@ -9,59 +9,87 @@ import Navbar from './Navbar'
 import LocationImageLoader from './LocationImageLoader'
 import MainTextLoader from './MainTextLoader'
 import OptionChoiceLoader from './OptionChoiceLoader'
-import { ReactComponent as TitleCard } from '../assets/svg/game-title.svg'
-
+import GameStartView from './GameStartView'
+import GameStartFlavorText from './GameStartFlavorText'
 import ProjectsView from './ProjectsView'
 
 const App = (props) => {
-  const [view, setView] = useState('home'); //home, adventure, about, projects, resume
-
-
-
+  // home, adventure, about, projects, resume
+  // adventure-projects, adventure-resume
+  const [view, setView] = useState('home');
+  const renderSwitch = (view) => {
+    switch (view) {
+      case 'home':
+        return {
+          location: <></>,
+          main: <GameStartView setView={setView}/>,
+          options:<GameStartFlavorText />
+        }
+      case 'adventure':
+        return {
+          location: <LocationImageLoader
+                      imageRef={
+                        props.tags.background || 'wizardtower'
+                      }
+                    />,
+          main:<MainTextLoader textArray={props.sceneText}/>,
+          options:  <OptionChoiceLoader
+                      choices={props.currentChoices}
+                      makeChoice={props.makeChoice}
+                    />
+        }
+      case 'about':
+        return {
+          location: <>about</>,
+          main:<>about</>,
+          options:<>about</>
+        }
+      case 'projects':
+        return {
+          location: <>projects</>,
+          main:<>projects</>,
+          options:<>projects</>
+        }
+      case 'resume':
+        return {
+          location: <>resume</>,
+          main:<>resume</>,
+          options:<>resume</>
+        }
+    }
+  }
 
   return (
     <div className='app'>
+
       <div className='header' >
         <Navbar />
       </div>
+
       <div className={view === 'home' ? 'game-box home' : 'game-box'}>
+        {/* Box Left Location */}
         <Box
           boxType='location'
-          content={
-            <></>
-            // <LocationImageLoader
-            //   imageRef={props.tags.background || 'wizardtower'}
-            // />
-          }
+          content={ renderSwitch(view).location }
         />
         <div className='game-box-right'>
+          {/* Box Right Main */}
           <Box
             boxType='main'
-            content={
-              <><TitleCard className='main-title-card'/></>
-              // false ?
-              // <ProjectsView />
-              // :
-              // <MainTextLoader
-              //   textArray={props.sceneText}
-              // />
-            }
+            content={ renderSwitch(view).main }
           />
+          {/* Box Right Options */}
           <Box
             boxType='option'
-            content={
-              <></>
-              // <OptionChoiceLoader
-              //   choices={props.currentChoices}
-              //   makeChoice={props.makeChoice}
-              // />
-            }
+            content={ renderSwitch(view).options }
           />
         </div>
       </div>
+
       <div className='footer' >
         <p>Made with ❤️ and Vite⚡</p>
       </div>
+
     </div>
   )
 }

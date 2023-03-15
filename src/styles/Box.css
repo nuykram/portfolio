@@ -18,9 +18,16 @@
 
 .box.option{
   position:relative;
+  background-color: #171511;
   width: 100%;
   height: calc(20vh);
   border-top: transparent;
+}
+
+.home{
+  background-image: url(/src/assets/svg/loc-main.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .game-box{
@@ -28,12 +35,16 @@
   margin:2vh auto;
   display: flex;
   flex-direction: row;
-
 }
 
 .game-box-right{
-  width: 80%;
-  max-width: 1000px;
+  width: 75%;
   display: flex;
   flex-direction: column;
+}
+
+.main-title-card{
+  scale: 0.65;
+  position: absolute;
+  bottom: 0%
 }

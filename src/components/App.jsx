@@ -13,7 +13,7 @@ import GameStartView from './GameStartView'
 import GameStartFlavorText from './GameStartFlavorText'
 import ProjectsView from './ProjectsView'
 import ResumePdfView from './ResumePdfView'
-
+import OptionsResume from './OptionsResume'
 
 const App = (props) => {
   // home, adventure, about, projects, resume
@@ -54,9 +54,11 @@ const App = (props) => {
         }
       case 'resume':
         return {
-          location: <>resume</>,
+          location: <LocationImageLoader
+                      imageRef={'wizardtowerinsideworkshop'}
+                    />,
           main:<ResumePdfView />,
-          options:<>resume</>
+          options:<OptionsResume setView={setView}/>
         }
     }
   }

@@ -2,7 +2,7 @@ import '../styles/OptionStart.css';
 
 import { ReactComponent as Sword } from '../assets/svg/sword-pointer.svg'
 
-const OptionStart = ({setView}) => {
+const OptionStart = ({ setView }) => {
 
 
   return (
@@ -10,13 +10,17 @@ const OptionStart = ({setView}) => {
       <div className='start-options-select'>
         <button
           onClick={ ()=>{setView('adventure')} }
-        >Start Game</button>
+        >
+          Start Game
+        </button>
         <Sword className='start-options-select-sword'/>
       </div>
       <div className='start-options-select'>
         <button
           onClick={ ()=>{setView('resume')} }
-        >Skip to Resume</button>
+        >
+          Skip to Resume
+        </button>
         <Sword className='start-options-select-sword'/>
       </div>
     </div>

@@ -17,3 +17,18 @@
   height:90%;
   position:absolute
 }
+
+.game-start-damage-text{
+  position:absolute;
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  user-select: none;
+}
+
+
+
+
+@keyframes fadeUpAndOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

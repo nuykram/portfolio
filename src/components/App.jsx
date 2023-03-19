@@ -48,8 +48,10 @@ const App = (props) => {
         }
       case 'projects':
         return {
-          location: <>projects</>,
-          main:<>projects</>,
+          location: <LocationImageLoader
+                      imageRef={'wizardtowerinsideworkshop'}
+                    />,
+          main:<ProjectsView />,
           options:<>projects</>
         }
       case 'resume':
@@ -67,7 +69,7 @@ const App = (props) => {
     <div className='app'>
 
       <div className='header' >
-        <Navbar />
+        <Navbar setView={setView}/>
       </div>
 
       <div className={`game-box ${view}`}>

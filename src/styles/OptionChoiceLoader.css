@@ -12,4 +12,5 @@
 
 .option-choiceloader > p:hover {
   color: #46543C;
+  cursor: pointer;
 }

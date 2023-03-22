@@ -15,20 +15,28 @@
   margin-left: 2%;
   bottom:0%;
   height:90%;
-  position:absolute
+  position:absolute;
+  cursor: url('sword-cursor-medium.png'), auto;
 }
+
 
 .game-start-damage-text{
   position:absolute;
   font-family: 'VT323', monospace;
   font-size: 1.3rem;
   user-select: none;
+  transform: translate(30%, 50%);
 }
 
 
-
-
 @keyframes fadeUpAndOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  from {
+      transform: translate3d(0,20px,0);
+      opacity: 1;
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: .2
+  }
 }

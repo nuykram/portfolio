@@ -16,6 +16,10 @@
   display:flex;
 }
 
+.navbar-logo:hover{
+  scale: 1.05
+}
+
 .navbar button{
   margin-left: 10px;
   margin-right:10px;

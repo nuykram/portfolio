@@ -20,14 +20,14 @@ const GameStartFlavorText = () => {
   }
 
   const handlePosition = (e) => {
-    console.log({
-      x: e.clientX,
-      y: e.clientY
-    })
-
+    // console.log({
+    //   x: e.target.offsetLeft,
+    //   y: e.target.offsetLeft
+    // })
+    var rect = e.target.getBoundingClientRect();
     setCoords({
-      x: e.clientX - e.target.offsetLeft,
-      y: e.clientY - e.target.offsetTop
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
     })
   }
 
@@ -44,14 +44,20 @@ const GameStartFlavorText = () => {
           :
           <WizardMe
             className='game-start-wizardme'
-            onClick={(e)=>{damageMark(250, e)}}
+            onClick={(e)=>{damageMark(300, e)}}
           />
       }
       {
         wizardMeDamaged ?
           <p
             className='game-start-damage-text'
-            style={{}}
+            style={
+              {
+                left:`${coords.x}px`,
+                top:`${coords.y}px`,
+                animation: 'fadeUpAndOut .75s'
+              }
+            }
           >
               -{Math.floor(Math.random() * 9) + 1} HP
           </p>

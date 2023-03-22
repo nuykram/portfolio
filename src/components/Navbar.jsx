@@ -14,7 +14,10 @@ const Navbar = ({setView}) => {
 
   return (
     <div className='navbar'>
-      <div className='navbar-logo' onClick={()=>{setView('home')}}>
+      <div
+        className='navbar-logo'
+        onClick={()=>{setView('home')}}
+      >
         <Logo />
       </div>
       <div className='navbar-buttons'>

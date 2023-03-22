@@ -35,9 +35,17 @@ const GameStartFlavorText = () => {
 
   return (
     <div className='game-start-flavortext-container'>
-      <p className='game-start-flavortext'>
+      <div className='game-start-flavortext'>
+        <p>
           Hello and welcome to my portfolio!
-      </p>
+        </p>
+        <p>
+          It's still a work in progress!
+        </p>
+        <p>
+          Please don't attack me!
+        </p>
+      </div>
       {
         wizardMeDamaged ?
           <WizardMeDamaged className='game-start-wizardme'/>

@@ -42,9 +42,9 @@ const App = (props) => {
         }
       case 'about':
         return {
-          location: <>about</>,
-          main:<>about</>,
-          options:<>about</>
+          location: <>WIP</>,
+          main:<>WIP</>,
+          options:<>WIP</>
         }
       case 'projects':
         return {
@@ -52,7 +52,7 @@ const App = (props) => {
                       imageRef={'wizardtowerinsideworkshop'}
                     />,
           main:<ProjectsView />,
-          options:<>projects</>
+          options:<>WIP</>
         }
       case 'resume':
         return {

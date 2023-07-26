@@ -7,5 +7,8 @@
 
 .main-title-card{
   width: 100%;
-  margin-top:10%
+  margin-top:10%;
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+  animation-iteration-count: infinite;
 }

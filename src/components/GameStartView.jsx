@@ -1,7 +1,7 @@
 import '../styles/GameStartView.css';
 import OptionStart from './OptionStart'
 import { ReactComponent as TitleCard } from '../assets/svg/game-title.svg'
-
+import 'animate.css';
 
 const GameStartView = ({setView}) => {
   return (
